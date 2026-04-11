@@ -1,0 +1,21 @@
+# Gobi Vault Internal Files
+_Gobi/
+_Gobi_/
+.gobi/
+_Settings_/
+
+# Obsidian Internal Files
+.obsidian/
+.obsidian.base
+
+# Local Configuration
+orchestrator.yaml
+Untitled.base
+.DS_Store
+
+# Private Study Notes
+study_notes/
+
+# OS Specific
+Thumbs.db
+Desktop.ini
