@@ -3,186 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mickey's Kitchen - Digital Brain</title>
+    <title>Mickey's Kitchen - Premium Knowledge Platform</title>
     <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Marked for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- Gobi SDK -->
     <script src="https://gobispace.com/gobi.js"></script>
     <style>
-:root {
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --accent: #2d3436; /* Deep charcoal for premium look */
-    --gold: #b2bec3;
-    --border: #f1f2f6;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-    --card-hover-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
-}
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #2d3436;
+            --border: #f1f2f6;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            --card-hover-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+        }
 
-* { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
-body {
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    margin: 0; padding: 0;
-    line-height: 1.7;
-}
+        * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0; padding: 0;
+            line-height: 1.7;
+        }
 
-/* Slim Fixed Navigation */
-nav {
-    position: fixed; top: 0; left: 0; width: 100%;
-    background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px);
-    z-index: 1000; border-bottom: 1px solid var(--border);
-    padding: 12px 0;
-}
-.nav-content {
-    max-width: 1400px; margin: 0 auto;
-    display: flex; justify-content: center; gap: 5px; flex-wrap: wrap;
-}
-.nav-btn {
-    background: none; border: none; padding: 6px 14px;
-    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
-    font-size: 0.75rem; text-transform: uppercase; cursor: pointer;
-    color: #95a5a6; border-radius: 8px; transition: all 0.3s ease;
-    letter-spacing: 1px;
-}
-.nav-btn:hover { color: var(--accent); background: #f8f9fa; }
-.nav-btn.active { color: var(--accent); position: relative; }
-.nav-btn.active::after { content: ''; position: absolute; bottom: 0; left: 25%; width: 50%; height: 2px; background: var(--accent); }
+        nav {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px);
+            z-index: 1000; border-bottom: 1px solid var(--border);
+            padding: 12px 0;
+        }
+        .nav-content {
+            max-width: 1400px; margin: 0 auto;
+            display: flex; justify-content: center; gap: 5px; flex-wrap: wrap;
+        }
+        .nav-btn {
+            background: none; border: none; padding: 6px 14px;
+            font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+            font-size: 0.75rem; text-transform: uppercase; cursor: pointer;
+            color: #95a5a6; border-radius: 8px; transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+        .nav-btn:hover { color: var(--accent); background: #f8f9fa; }
+        .nav-btn.active { color: var(--accent); position: relative; }
+        .nav-btn.active::after { content: ''; position: absolute; bottom: 0; left: 25%; width: 50%; height: 2px; background: var(--accent); }
 
-/* Header - Editorial Style */
-.container { max-width: 1400px; margin: 0 auto; padding: 140px 40px 80px; }
-header { text-align: center; margin-bottom: 120px; }
-.title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 5.5rem;
-    font-weight: 500;
-    font-style: italic;
-    color: var(--accent);
-    margin: 0;
-    line-height: 1;
-}
-.motto {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    color: #b2bec3;
-    margin-top: 20px;
-    font-weight: 700;
-}
+        .container { max-width: 1400px; margin: 0 auto; padding: 140px 40px 80px; }
+        header { text-align: center; margin-bottom: 100px; }
+        .title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5.5rem; font-weight: 500; font-style: italic;
+            color: var(--accent); margin: 0; line-height: 1;
+        }
+        .motto {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: 6px; text-transform: uppercase;
+            font-size: 0.8rem; color: #b2bec3; margin-top: 20px; font-weight: 700;
+        }
 
-/* Sections - Gallery Style */
-.cuisine-section { margin-bottom: 140px; scroll-margin-top: 120px; }
-.section-header {
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 15px;
-}
-.section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
-    margin: 0;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-}
-.section-count {
-    font-size: 0.8rem;
-    color: #bdc3c7;
-    font-weight: 600;
-}
+        .cuisine-section { margin-bottom: 120px; scroll-margin-top: 120px; }
+        .section-header {
+            margin-bottom: 40px; display: flex; align-items: center;
+            justify-content: space-between; border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+        }
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem; margin: 0; font-weight: 500;
+        }
 
-/* Grid & Minimalist Cards */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    gap: 40px;
-}
-.card {
-    background: white;
-    border: 1px solid var(--border);
-    padding: 50px 40px;
-    border-radius: 4px; /* Sharp but slightly rounded for premium feel */
-    cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 100%;
-}
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--card-hover-shadow);
-    border-color: #dcdde1;
-}
-.card-tag {
-    font-size: 0.65rem;
-    font-weight: 800;
-    color: #bdc3c7;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
-}
-.card-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.9rem;
-    margin: 0;
-    color: var(--text);
-    line-height: 1.2;
-    font-weight: 500;
-}
-.card-arrow {
-    margin-top: auto;
-    padding-top: 30px;
-    font-size: 1.2rem;
-    color: #dfe6e9;
-    transition: 0.3s;
-}
-.card:hover .card-arrow { color: var(--accent); transform: translateX(5px); }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 40px;
+        }
+        .card {
+            background: white; border: 1px solid var(--border); padding: 50px 40px;
+            border-radius: 4px; cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+            display: flex; flex-direction: column; height: 100%;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: var(--card-hover-shadow); border-color: #dcdde1; }
+        .card-tag { font-size: 0.65rem; font-weight: 800; color: #bdc3c7; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px; }
+        .card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; margin: 0; font-weight: 500; }
+        .card-arrow { margin-top: auto; padding-top: 30px; font-size: 1.2rem; color: #dfe6e9; transition: 0.3s; }
+        .card:hover .card-arrow { color: var(--accent); transform: translateX(5px); }
 
-/* Editorial Viewer Overlay */
-#viewer {
-    display: none; position: fixed; inset: 0;
-    background: white; z-index: 2000; overflow-y: auto; padding: 100px 40px;
-}
-.viewer-inner { max-width: 900px; margin: 0 auto; }
-.close-btn {
-    position: fixed; top: 40px; right: 50px;
-    font-size: 2.5rem; cursor: pointer; border: none; background: none;
-    font-weight: 200; color: #aaa; transition: 0.3s;
-}
-.close-btn:hover { color: var(--accent); transform: rotate(90deg); }
+        #viewer {
+            display: none; position: fixed; inset: 0;
+            background: white; z-index: 2000; overflow-y: auto; padding: 100px 40px;
+        }
+        .viewer-inner { max-width: 900px; margin: 0 auto; }
+        .close-btn {
+            position: fixed; top: 40px; right: 50px;
+            font-size: 2.5rem; cursor: pointer; border: none; background: none;
+            font-weight: 200; color: #aaa;
+        }
 
-.md-body { font-size: 1.2rem; line-height: 1.8; color: #2d3436; }
-.md-body h1, .md-body h2 { font-family: 'Cormorant Garamond', serif; margin-top: 2em; }
+        .md-body { font-size: 1.2rem; line-height: 1.8; color: #2d3436; }
+        .md-body h1, .md-body h2 { font-family: 'Cormorant Garamond', serif; margin-top: 2em; }
 
-/* Status & Debug */
-#status-overlay { position: fixed; inset: 0; background: white; z-index: 3000; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: 0.8s ease-in-out; }
-#debug-log {
-    display: none; /* Toggle with 'L' key */
-    background: #1a1a1a; color: #00d1b2; padding: 25px; border-radius: 12px;
-    font-family: 'Space Grotesk', monospace; font-size: 11px; margin-top: 100px;
-    white-space: pre-wrap; height: 250px; overflow-y: auto; border: 1px solid #333;
-}
+        #status-overlay {
+            position: fixed; inset: 0; background: white; z-index: 3000;
+            display: flex; align-items: center; justify-content: center; flex-direction: column;
+        }
 
-@media (max-width: 768px) {
-    .title { font-size: 3.5rem; }
-    .grid { grid-template-columns: 1fr; }
-}
+        #debug-panel {
+            background: #1a1a1a; color: #00d1b2; padding: 20px;
+            font-family: monospace; font-size: 11px; margin: 40px auto;
+            max-width: 1400px; height: 150px; overflow-y: auto;
+            border-radius: 8px; display: none; /* Hide by default, show on error */
+        }
+
+        @media (max-width: 768px) {
+            .title { font-size: 3.5rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
 <div id="status-overlay">
     <h1 style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--accent); font-size: 3rem;">Mickey's Kitchen</h1>
-    <p id="status-msg" style="letter-spacing: 3px; text-transform: uppercase; font-size: 0.7rem; color: #b2bec3; font-weight: 700; margin-top: 10px;">Arranging the Table...</p>
+    <p id="status-msg" style="letter-spacing: 3px; text-transform: uppercase; font-size: 0.7rem; color: #b2bec3; font-weight: 700;">Setting the Table...</p>
+    <button id="force-start" style="margin-top: 20px; padding: 10px 20px; display: none;">Skip Loading</button>
 </div>
 
 <nav>
@@ -199,9 +147,9 @@ header { text-align: center; margin-bottom: 120px; }
 
     <div id="kitchen-root"></div>
 
-    <footer>
-        <div id="debug-log">SYSTEM LOG ACTIVATED...</div>
-    </footer>
+    <div id="debug-panel">
+        <div>[SYSTEM] Initializing Diagnostics...</div>
+    </div>
 </div>
 
 <div id="viewer">
@@ -211,119 +159,156 @@ header { text-align: center; margin-bottom: 120px; }
 
 <script>
     const categories = ['Stock', 'StockBot', 'Music', 'Health', 'Illustration', 'Thoughts', 'Study'];
-    const dLog = document.getElementById('debug-log');
 
-    const log = (msg) => {
-        const time = new Date().toLocaleTimeString();
-        dLog.innerText += `\n[${time}] ${msg}`;
-        dLog.scrollTop = dLog.scrollHeight;
-        console.log(msg);
-    };
-
-    // Secret Toggle for Log: Press 'L'
-    window.addEventListener('keydown', (e) => {
-        if (e.key.toLowerCase() === 'l') {
-            dLog.style.display = dLog.style.display === 'none' ? 'block' : 'none';
-            if(dLog.style.display === 'block') dLog.scrollIntoView({behavior:'smooth'});
+    function log(msg) {
+        const panel = document.getElementById('debug-panel');
+        if (panel) {
+            const line = document.createElement('div');
+            line.innerText = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            panel.appendChild(line);
+            panel.scrollTop = panel.scrollHeight;
         }
-    });
+        console.log(msg);
+    }
 
     async function init() {
-        log("Initializing Premium Engine...");
+        log("Engine started.");
+        const statusMsg = document.getElementById('status-msg');
+
         try {
+            // 1. Wait for SDK
             let retries = 0;
-            while (typeof window.gobi === 'undefined' && retries < 15) {
+            while (typeof window.gobi === 'undefined' && retries < 30) {
+                if (retries % 5 === 0) log(`Waiting for SDK... (${retries+1}/30)`);
                 await new Promise(r => setTimeout(r, 200));
                 retries++;
             }
 
             if (typeof window.gobi === 'undefined') {
-                document.getElementById('status-msg').innerText = "CONNECTION TIMEOUT. PLEASE REFRESH.";
+                log("FATAL: Gobi SDK not found.");
+                statusMsg.innerText = "ERROR: SDK TIMEOUT. PLEASE REFRESH.";
+                document.getElementById('debug-panel').style.display = 'block';
+                document.getElementById('force-start').style.display = 'block';
                 return;
             }
 
-            const menu = {};
-            let total = 0;
+            // Safety check for gobi.vault
+            if (!gobi.vault) {
+                log("SDK loaded but Vault not ready. Retrying...");
+                await new Promise(r => setTimeout(r, 1000));
+            }
 
+            log("SDK Connected.");
+            statusMsg.innerText = "SOURCING INGREDIENTS...";
+
+            const menu = {};
+            let totalFiles = 0;
+
+            // 2. Fetch files from each category (Trying multiple paths for nav=false compatibility)
             for (const cat of categories) {
-                log(`Sourcing Category: ${cat}`);
-                try {
-                    const files = await gobi.listFiles(`../${cat}`);
+                let files = null;
+                const pathsToTry = [`../${cat}`, `./${cat}`, `/${cat}`, cat];
+
+                for (const testPath of pathsToTry) {
+                    try {
+                        log(`Trying path: ${testPath}`);
+                        const res = await gobi.listFiles(testPath);
+                        if (res && Array.isArray(res) && res.length > 0) {
+                            files = res;
+                            log(`  SUCCESS at ${testPath}`);
+                            break;
+                        }
+                    } catch (e) { /* continue to next path */ }
+                }
+
+                if (files) {
                     const mdFiles = files.filter(f => f.type === 'file' && f.name.endsWith('.md') && f.name !== 'README.md');
                     if (mdFiles.length > 0) {
                         menu[cat] = mdFiles;
-                        total += mdFiles.length;
+                        totalFiles += mdFiles.length;
                     }
-                } catch (e) { log(`Skipped ${cat}`); }
+                } else {
+                    log(`  FAILED: All paths exhausted for ${cat}`);
+                }
             }
 
-            if (total > 0) {
-                render(menu);
-                document.getElementById('status-overlay').style.opacity = '0';
-                setTimeout(() => document.getElementById('status-overlay').style.display = 'none', 800);
+            // 3. Render
+            if (totalFiles > 0) {
+                renderAll(menu);
+                const overlay = document.getElementById('status-overlay');
+                overlay.style.transition = "opacity 0.8s";
+                overlay.style.opacity = "0";
+                setTimeout(() => overlay.style.display = "none", 800);
+                log("Ready.");
             } else {
-                document.getElementById('status-msg').innerText = "THE PANTRY IS EMPTY. ADD NOTES TO BEGIN.";
+                log("WARNING: Pantry is empty.");
+                statusMsg.innerText = "PANTRY IS EMPTY. ADD NOTES TO START.";
+                document.getElementById('debug-panel').style.display = 'block';
             }
 
         } catch (err) {
             log("CRITICAL ERROR: " + err.message);
+            statusMsg.innerText = "CHEF ERROR: " + err.message;
+            document.getElementById('debug-panel').style.display = 'block';
         }
     }
 
-    function render(menu) {
+    function renderAll(menu) {
         const root = document.getElementById('kitchen-root');
         const nav = document.getElementById('nav-list');
-        const sortedFolders = Object.keys(menu).sort();
+        const sortedCats = Object.keys(menu).sort();
 
-        sortedFolders.forEach(folder => {
-            // Nav
+        sortedCats.forEach(cat => {
             const btn = document.createElement('button');
             btn.className = 'nav-btn';
-            btn.innerText = folder;
-            btn.onclick = () => scrollToId(folder);
+            btn.innerText = cat;
+            btn.onclick = () => scrollToId(cat);
             nav.appendChild(btn);
 
-            // Section
             const section = document.createElement('section');
             section.className = 'cuisine-section';
-            section.id = folder;
+            section.id = cat;
             section.innerHTML = `
                 <div class="section-header">
-                    <h2 class="section-title">${folder}</h2>
-                    <span class="section-count">${menu[folder].length} ITEMS</span>
+                    <h2 class="section-title">${cat}</h2>
+                    <span style="font-size:0.75rem; color:#b2bec3; font-weight:600;">${menu[cat].length} ITEMS</span>
                 </div>
-                <div class="grid"></div>
+                <div class="grid" id="grid-${cat}"></div>
             `;
-            const grid = section.querySelector('.grid');
+            root.appendChild(section);
 
-            menu[folder].forEach(file => {
+            const grid = document.getElementById(`grid-${cat}`);
+            menu[cat].forEach(file => {
                 const card = document.createElement('div');
                 card.className = 'card';
-                const path = `../${folder}/${file.name}`;
-                card.onclick = () => openDoc(path);
+                const path = `../${cat}/${file.name}`;
+                card.onclick = () => openRecipe(path);
                 card.innerHTML = `
-                    <div class="card-tag">${folder}</div>
+                    <div class="card-tag">${cat}</div>
                     <h3 class="card-title">${file.name.replace('.md', '')}</h3>
                     <div class="card-arrow">→</div>
                 `;
                 grid.appendChild(card);
             });
-            root.appendChild(section);
         });
     }
 
-    async function openDoc(path) {
+    async function openRecipe(path) {
         try {
+            log(`Reading: ${path}`);
             const content = await gobi.readFile(path);
             document.getElementById('viewer-body').innerHTML = `
-                <div style="margin-bottom: 60px; padding-bottom: 30px; border-bottom: 1px solid #f1f2f6; text-align:center;">
-                    <span style="letter-spacing:3px; color:#b2bec3; font-weight:700; text-transform:uppercase; font-size:0.7rem;">${path.replace('../', '')}</span>
+                <div style="margin-bottom: 60px; padding-bottom: 20px; border-bottom: 1px solid #f1f2f6; text-align:center;">
+                    <span style="letter-spacing:3px; color:#b2bec3; font-size:0.7rem; text-transform:uppercase; font-weight:700;">${path.replace('../', '')}</span>
                 </div>
                 <div class="md-body">${marked.parse(content)}</div>
             `;
             document.getElementById('viewer').style.display = 'block';
             document.body.style.overflow = 'hidden';
-        } catch (e) { alert("Error: " + e.message); }
+        } catch (e) {
+            log(`Read Error: ${e.message}`);
+            alert("Error: " + e.message);
+        }
     }
 
     function closeViewer() {
@@ -336,7 +321,11 @@ header { text-align: center; margin-bottom: 120px; }
         if (el) window.scrollTo({ top: el.offsetTop - 120, behavior: 'smooth' });
     }
 
-    window.addEventListener('DOMContentLoaded', init);
+    document.getElementById('force-start').onclick = () => {
+        document.getElementById('status-overlay').style.display = 'none';
+    };
+
+    window.addEventListener('load', init);
 </script>
 </body>
 </html>
