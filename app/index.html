@@ -4,112 +4,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mickey's Kitchen - Digital Brain</title>
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <!-- Marked for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- Gobi SDK -->
     <script src="https://gobispace.com/gobi.js"></script>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700&display=swap');
-
 :root {
     --bg: #ffffff;
-    --text: #111111;
-    --accent: #8b4513;
-    --secondary: #666666;
-    --border: #eeeeee;
+    --text: #1a1a1a;
+    --accent: #2d3436; /* Deep charcoal for premium look */
+    --gold: #b2bec3;
+    --border: #f1f2f6;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    --card-hover-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
 }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     margin: 0; padding: 0;
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
-/* Fixed Navigation */
+/* Slim Fixed Navigation */
 nav {
     position: fixed; top: 0; left: 0; width: 100%;
-    background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px);
     z-index: 1000; border-bottom: 1px solid var(--border);
-    padding: 15px 0;
+    padding: 12px 0;
 }
 .nav-content {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
-    padding: 0 20px;
+    max-width: 1400px; margin: 0 auto;
+    display: flex; justify-content: center; gap: 5px; flex-wrap: wrap;
 }
 .nav-btn {
-    background: none; border: none; padding: 8px 16px;
-    font-family: 'Space Grotesk', sans-serif; font-weight: 500;
-    font-size: 0.8rem; text-transform: uppercase; cursor: pointer;
-    color: #888; border-radius: 20px; transition: all 0.2s;
+    background: none; border: none; padding: 6px 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600;
+    font-size: 0.75rem; text-transform: uppercase; cursor: pointer;
+    color: #95a5a6; border-radius: 8px; transition: all 0.3s ease;
+    letter-spacing: 1px;
 }
-.nav-btn:hover { color: var(--accent); background: #fcfcfc; }
-.nav-btn.active { background: var(--accent); color: white; }
+.nav-btn:hover { color: var(--accent); background: #f8f9fa; }
+.nav-btn.active { color: var(--accent); position: relative; }
+.nav-btn.active::after { content: ''; position: absolute; bottom: 0; left: 25%; width: 50%; height: 2px; background: var(--accent); }
 
-/* Header */
-.container { max-width: 1200px; margin: 0 auto; padding: 120px 20px 60px; }
-header { text-align: center; margin-bottom: 100px; }
-.title { font-family: 'Playfair Display', serif; font-size: 4.5rem; font-weight: 700; font-style: italic; color: var(--accent); margin: 0; }
-.motto { font-family: 'Space Grotesk', sans-serif; letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; color: #aaa; margin-top: 15px; }
+/* Header - Editorial Style */
+.container { max-width: 1400px; margin: 0 auto; padding: 140px 40px 80px; }
+header { text-align: center; margin-bottom: 120px; }
+.title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--accent);
+    margin: 0;
+    line-height: 1;
+}
+.motto {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: #b2bec3;
+    margin-top: 20px;
+    font-weight: 700;
+}
 
-/* Section Styling */
-.cuisine-section { margin-bottom: 100px; scroll-margin-top: 100px; }
-.section-header { margin-bottom: 40px; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
-.section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0; font-weight: 700; }
+/* Sections - Gallery Style */
+.cuisine-section { margin-bottom: 140px; scroll-margin-top: 120px; }
+.section-header {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+}
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+.section-count {
+    font-size: 0.8rem;
+    color: #bdc3c7;
+    font-weight: 600;
+}
 
-/* Card Grid */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; }
+/* Grid & Minimalist Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 40px;
+}
 .card {
-    background: white; border: 1px solid var(--border); padding: 40px;
-    border-radius: 16px; cursor: pointer; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    display: flex; flex-direction: column; position: relative; height: 100%;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 50px 40px;
+    border-radius: 4px; /* Sharp but slightly rounded for premium feel */
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
 }
-.card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-color: #ddd; }
-.card-tag { font-size: 0.7rem; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; }
-.card-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin: 0 0 15px 0; color: var(--text); line-height: 1.2; }
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-hover-shadow);
+    border-color: #dcdde1;
+}
+.card-tag {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #bdc3c7;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+.card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    margin: 0;
+    color: var(--text);
+    line-height: 1.2;
+    font-weight: 500;
+}
+.card-arrow {
+    margin-top: auto;
+    padding-top: 30px;
+    font-size: 1.2rem;
+    color: #dfe6e9;
+    transition: 0.3s;
+}
+.card:hover .card-arrow { color: var(--accent); transform: translateX(5px); }
 
-/* Viewer Overlay */
+/* Editorial Viewer Overlay */
 #viewer {
-    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: white; z-index: 2000; overflow-y: auto; padding: 80px 24px;
+    display: none; position: fixed; inset: 0;
+    background: white; z-index: 2000; overflow-y: auto; padding: 100px 40px;
 }
-.viewer-inner { max-width: 800px; margin: 0 auto; }
-.close-btn { position: fixed; top: 30px; right: 40px; font-size: 3rem; cursor: pointer; border: none; background: none; font-weight: 200; }
+.viewer-inner { max-width: 900px; margin: 0 auto; }
+.close-btn {
+    position: fixed; top: 40px; right: 50px;
+    font-size: 2.5rem; cursor: pointer; border: none; background: none;
+    font-weight: 200; color: #aaa; transition: 0.3s;
+}
+.close-btn:hover { color: var(--accent); transform: rotate(90deg); }
 
-/* Debug Console */
-#debug-log { background: #212529; color: #0f0; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 11px; margin-top: 50px; white-space: pre-wrap; height: 200px; overflow-y: auto; border: 2px solid #444; }
+.md-body { font-size: 1.2rem; line-height: 1.8; color: #2d3436; }
+.md-body h1, .md-body h2 { font-family: 'Cormorant Garamond', serif; margin-top: 2em; }
 
-/* Status Overlay */
-#status-overlay { position: fixed; inset: 0; background: white; z-index: 3000; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity 0.5s; }
+/* Status & Debug */
+#status-overlay { position: fixed; inset: 0; background: white; z-index: 3000; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: 0.8s ease-in-out; }
+#debug-log {
+    display: none; /* Toggle with 'L' key */
+    background: #1a1a1a; color: #00d1b2; padding: 25px; border-radius: 12px;
+    font-family: 'Space Grotesk', monospace; font-size: 11px; margin-top: 100px;
+    white-space: pre-wrap; height: 250px; overflow-y: auto; border: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+    .title { font-size: 3.5rem; }
+    .grid { grid-template-columns: 1fr; }
+}
     </style>
 </head>
 <body>
 
 <div id="status-overlay">
-    <h1 style="font-family: 'Playfair Display'; font-style: italic; color: var(--accent);">Mickey's Kitchen</h1>
-    <p id="status-msg">Heating up the stove...</p>
+    <h1 style="font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--accent); font-size: 3rem;">Mickey's Kitchen</h1>
+    <p id="status-msg" style="letter-spacing: 3px; text-transform: uppercase; font-size: 0.7rem; color: #b2bec3; font-weight: 700; margin-top: 10px;">Arranging the Table...</p>
 </div>
 
 <nav>
     <div class="nav-content" id="nav-list">
-        <button class="nav-item active" onclick="scrollToId('header')">Home</button>
+        <button class="nav-btn active" onclick="scrollToId('header')">Home</button>
     </div>
 </nav>
 
 <div class="container">
     <header id="header">
         <h1 class="title">Mickey's Kitchen</h1>
-        <div class="motto">Curated Insights & Personal Brain Recipes</div>
+        <div class="motto">Refined Knowledge & Personal Insights</div>
     </header>
 
     <div id="kitchen-root"></div>
 
     <footer>
-        <h2 style="font-family: 'Playfair Display'; font-style: italic; margin-bottom: 30px; text-align: center;">Chef's Kitchen Log</h2>
-        <div id="debug-log">Discovering ingredients...</div>
+        <div id="debug-log">SYSTEM LOG ACTIVATED...</div>
     </footer>
 </div>
 
@@ -129,59 +220,53 @@ header { text-align: center; margin-bottom: 100px; }
         console.log(msg);
     };
 
+    // Secret Toggle for Log: Press 'L'
+    window.addEventListener('keydown', (e) => {
+        if (e.key.toLowerCase() === 'l') {
+            dLog.style.display = dLog.style.display === 'none' ? 'block' : 'none';
+            if(dLog.style.display === 'block') dLog.scrollIntoView({behavior:'smooth'});
+        }
+    });
+
     async function init() {
-        log("Kitchen engine starting...");
+        log("Initializing Premium Engine...");
         try {
-            // Wait for SDK
             let retries = 0;
             while (typeof window.gobi === 'undefined' && retries < 15) {
-                log(`Waiting for SDK... (${retries+1}/15)`);
-                await new Promise(r => setTimeout(r, 500));
+                await new Promise(r => setTimeout(r, 200));
                 retries++;
             }
 
             if (typeof window.gobi === 'undefined') {
-                log("FATAL: Gobi SDK Timeout!");
-                document.getElementById('status-msg').innerText = "SDK Load Timeout. Please refresh.";
+                document.getElementById('status-msg').innerText = "CONNECTION TIMEOUT. PLEASE REFRESH.";
                 return;
             }
 
-            log("SDK Connected. Vault: " + gobi.vault.vaultId);
-            document.getElementById('status-msg').innerText = "Reading pantry folders...";
-
             const menu = {};
-            let totalFound = 0;
+            let total = 0;
 
             for (const cat of categories) {
-                log(`Reading folder: "../${cat}"`);
+                log(`Sourcing Category: ${cat}`);
                 try {
                     const files = await gobi.listFiles(`../${cat}`);
                     const mdFiles = files.filter(f => f.type === 'file' && f.name.endsWith('.md') && f.name !== 'README.md');
                     if (mdFiles.length > 0) {
                         menu[cat] = mdFiles;
-                        totalFound += mdFiles.length;
-                        log(`  SUCCESS: Found ${mdFiles.length} recipes.`);
-                    } else {
-                        log(`  EMPTY: No markdown files found in ${cat}.`);
+                        total += mdFiles.length;
                     }
-                } catch (e) {
-                    log(`  SKIP: Folder ${cat} unreachable: ${e.message}`);
-                }
+                } catch (e) { log(`Skipped ${cat}`); }
             }
 
-            if (totalFound > 0) {
+            if (total > 0) {
                 render(menu);
                 document.getElementById('status-overlay').style.opacity = '0';
-                setTimeout(() => document.getElementById('status-overlay').style.display = 'none', 500);
-                log("RENDER COMPLETE.");
+                setTimeout(() => document.getElementById('status-overlay').style.display = 'none', 800);
             } else {
-                log("WARNING: No recipes found in any folder.");
-                document.getElementById('status-msg').innerText = "Pantry is empty. Please check your vault structure.";
+                document.getElementById('status-msg').innerText = "THE PANTRY IS EMPTY. ADD NOTES TO BEGIN.";
             }
 
         } catch (err) {
             log("CRITICAL ERROR: " + err.message);
-            document.getElementById('status-msg').innerText = "Chef's Error: " + err.message;
         }
     }
 
@@ -191,48 +276,54 @@ header { text-align: center; margin-bottom: 100px; }
         const sortedFolders = Object.keys(menu).sort();
 
         sortedFolders.forEach(folder => {
-            // Add Nav
+            // Nav
             const btn = document.createElement('button');
             btn.className = 'nav-btn';
             btn.innerText = folder;
             btn.onclick = () => scrollToId(folder);
             nav.appendChild(btn);
 
-            // Add Section
+            // Section
             const section = document.createElement('section');
             section.className = 'cuisine-section';
             section.id = folder;
-            section.innerHTML = `<div class="section-header"><h2 class="section-title">${folder}</h2></div><div class="grid" id="grid-${folder}"></div>`;
-            root.appendChild(section);
+            section.innerHTML = `
+                <div class="section-header">
+                    <h2 class="section-title">${folder}</h2>
+                    <span class="section-count">${menu[folder].length} ITEMS</span>
+                </div>
+                <div class="grid"></div>
+            `;
+            const grid = section.querySelector('.grid');
 
-            const grid = document.getElementById(`grid-${folder}`);
             menu[folder].forEach(file => {
                 const card = document.createElement('div');
                 card.className = 'card';
-                const fullPath = `../${folder}/${file.name}`;
-                card.onclick = () => openDoc(fullPath);
-                card.innerHTML = `<div class="card-tag">${folder}</div><h3 class="card-title">${file.name.replace('.md', '')}</h3>`;
+                const path = `../${folder}/${file.name}`;
+                card.onclick = () => openDoc(path);
+                card.innerHTML = `
+                    <div class="card-tag">${folder}</div>
+                    <h3 class="card-title">${file.name.replace('.md', '')}</h3>
+                    <div class="card-arrow">→</div>
+                `;
                 grid.appendChild(card);
             });
+            root.appendChild(section);
         });
     }
 
     async function openDoc(path) {
         try {
-            log(`Opening recipe: ${path}`);
             const content = await gobi.readFile(path);
             document.getElementById('viewer-body').innerHTML = `
-                <div style="margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                    <small style="color: #aaa; text-transform: uppercase; letter-spacing: 1px;">Location: ${path.replace('../', '')}</small>
+                <div style="margin-bottom: 60px; padding-bottom: 30px; border-bottom: 1px solid #f1f2f6; text-align:center;">
+                    <span style="letter-spacing:3px; color:#b2bec3; font-weight:700; text-transform:uppercase; font-size:0.7rem;">${path.replace('../', '')}</span>
                 </div>
-                ${marked.parse(content)}
+                <div class="md-body">${marked.parse(content)}</div>
             `;
             document.getElementById('viewer').style.display = 'block';
             document.body.style.overflow = 'hidden';
-        } catch (e) {
-            log(`ERROR opening ${path}: ${e.message}`);
-            alert("Error: " + e.message);
-        }
+        } catch (e) { alert("Error: " + e.message); }
     }
 
     function closeViewer() {
@@ -242,10 +333,9 @@ header { text-align: center; margin-bottom: 100px; }
 
     function scrollToId(id) {
         const el = document.getElementById(id);
-        if (el) window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });
+        if (el) window.scrollTo({ top: el.offsetTop - 120, behavior: 'smooth' });
     }
 
-    // Start
     window.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
