@@ -197,7 +197,7 @@
 <div class="container">
     <header>
         <h1 class="kitchen-title">Mickey's Kitchen</h1>
-        <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.75rem; color: var(--secondary-color); font-weight: 800;">Digital Brain Recipe Book v3.4 (Self-Healing Engine)</p>
+        <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.75rem; color: var(--secondary-color); font-weight: 800;">Digital Brain Recipe Book v3.6 (Bulletproof Engine)</p>
     </header>
 
     <div id="kitchen-main">
@@ -238,7 +238,6 @@
         const params = new URLSearchParams(window.location.search);
         log("Environment Detect: nav=" + params.get('nav'));
 
-        // URL에서 vault ID 추출 시도 (Self-Healing)
         const pathParts = window.location.pathname.split('/');
         const urlSlug = pathParts.find(p => p.startsWith('@'))?.replace('@', '');
         if (urlSlug) {
@@ -251,7 +250,6 @@
             attempts++;
             if (window.gobi) {
                 clearInterval(checkSDK);
-                // SDK가 vaultId를 놓쳤을 경우 강제 주입
                 if (!gobi.vaultId) {
                     gobi.vaultId = vaultSlug;
                     log("Self-Healed Vault ID: " + gobi.vaultId);
@@ -259,10 +257,10 @@
                     log("SDK Connected. Vault: " + gobi.vaultId);
                 }
                 await startCooking();
-            } else if (attempts > 40) { // 조금 더 기다림
+            } else if (attempts > 40) {
                 clearInterval(checkSDK);
-                log("FATAL: SDK Timeout. Trying fallback rendering...");
-                await startCooking(); // SDK 없어도 시도
+                log("FATAL: SDK Timeout.");
+                await startCooking();
             }
         }, 200);
     };
@@ -281,14 +279,13 @@
             log(`Cooking category: "${cat}"`);
             let recipes = [];
 
-            // 더 공격적인 경로 탐색 (Self-Healing)
             const pathsToTry = [
                 `../${cat}`,
                 `./${cat}`,
                 `/${cat}`,
                 cat,
                 `../../${cat}`,
-                `@${vaultSlug}/${cat}` // 절대 경로 시도
+                `@${vaultSlug}/${cat}`
             ];
 
             let successfulPath = null;
@@ -308,14 +305,12 @@
             }
 
             if (recipes.length > 0) {
-                // Add Nav Link
                 const nl = document.createElement('a');
                 nl.href = `#section-${cat}`;
                 nl.className = 'nav-link';
                 nl.innerText = cat;
                 nav.appendChild(nl);
 
-                // Create Section
                 const sec = document.createElement('section');
                 sec.id = `section-${cat}`;
                 sec.innerHTML = `<h2 class="section-title">${cat}</h2>`;
@@ -326,8 +321,7 @@
                 recipes.forEach(r => {
                     const card = document.createElement('div');
                     card.className = 'recipe-card';
-                    const fullPath = `${successfulPath}/${r.name}`;
-                    card.onclick = () => openRecipe(fullPath);
+                    card.onclick = () => openRecipe(cat, r.name); // Pure cat and filename
 
                     card.innerHTML = `
                         <div style="font-size: 0.7rem; color: var(--secondary-color); font-weight: 800; text-transform: uppercase; margin-bottom: 10px;">${cat}</div>
@@ -350,10 +344,41 @@
         log("COOKING COMPLETE.");
     }
 
-    async function openRecipe(path) {
-        log(`Opening recipe: ${path}`);
+    async function openRecipe(cat, fileName) {
+        log(`Preparing to open: ${cat}/${fileName}`);
+
+        // Multi-Path Probe for READING too!
+        const pathsToTry = [
+            `../${cat}/${fileName}`,
+            `./${cat}/${fileName}`,
+            `/${cat}/${fileName}`,
+            `${cat}/${fileName}`,
+            `../../${cat}/${fileName}`,
+            `@${vaultSlug}/${cat}/${fileName}`
+        ];
+
+        let content = null;
+        let finalPath = "";
+
+        for (const p of pathsToTry) {
+            try {
+                log(`  Trying read path: ${p}`);
+                content = await gobi.vault.readFile(p);
+                if (content) {
+                    finalPath = p;
+                    log(`    SUCCESS reading from ${p}`);
+                    break;
+                }
+            } catch (e) { /* continue */ }
+        }
+
+        if (!content) {
+            log(`ERROR: Failed to read ${cat}/${fileName} after all attempts`);
+            alert("This recipe is still simmering. (File Error)");
+            return;
+        }
+
         try {
-            const content = await gobi.vault.readFile(path);
             const html = marked.parse(content);
             const viewer = document.getElementById('recipe-viewer');
             const contentArea = document.getElementById('viewer-content');
@@ -361,15 +386,15 @@
             contentArea.innerHTML = `
                 <div style="font-family: 'Cormorant Garamond'; text-align: center; margin-bottom: 40px;">
                     <div style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: var(--secondary-color); font-weight: 800; margin-bottom: 10px;">Recipe Detail</div>
-                    <h1 style="font-size: 3.5rem; margin: 0; font-style: italic;">${path.split('/').pop().replace('.md', '')}</h1>
+                    <h1 style="font-size: 3.5rem; margin: 0; font-style: italic;">${fileName.replace('.md', '')}</h1>
+                    <div style="font-size: 0.7rem; color: #ccc; margin-top: 10px;">Loaded via: ${finalPath}</div>
                 </div>
                 <div class="markdown-content">${html}</div>
             `;
             viewer.style.display = 'block';
             document.body.style.overflow = 'hidden';
         } catch (e) {
-            log(`ERROR: Failed to read ${path}`);
-            alert("This recipe is still simmering. (File Error)");
+            log("ERROR: Markdown parsing failed");
         }
     }
 
@@ -381,4 +406,4 @@
 
 </body>
 </html>
-<!-- Last Force Sync: Mon Apr 13 23:33:40 PDT 2026 -->
+<!-- Bulletproof Path Fix: Mon Apr 13 23:45:00 PDT 2026 --><!-- Final Force Update: Mon Apr 13 23:46:16 PDT 2026 -->
