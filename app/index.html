@@ -197,11 +197,11 @@
 <div class="container">
     <header>
         <h1 class="kitchen-title">Mickey's Kitchen</h1>
-        <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.75rem; color: var(--secondary-color); font-weight: 800;">Digital Brain Recipe Book v3.2</p>
+        <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.75rem; color: var(--secondary-color); font-weight: 800;">Digital Brain Recipe Book v3.4 (Self-Healing Engine)</p>
     </header>
 
     <div id="kitchen-main">
-        <p style="text-align: center; font-style: italic;" id="loading-msg">Arranging the Table...</p>
+        <p style="text-align: center; font-style: italic;" id="loading-msg">Preparing the ingredients...</p>
     </div>
 </div>
 
@@ -213,6 +213,7 @@
 <script>
     const categories = ['Stock', 'StockBot', 'Music', 'Health', 'Illustration', 'Thoughts', 'Study'];
     const logs = [];
+    let vaultSlug = 'mickeyfromsd'; // Fallback slug
 
     function log(msg) {
         const time = new Date().toLocaleTimeString();
@@ -234,19 +235,34 @@
     });
 
     window.onload = async () => {
-        log("Kitchen engine starting...");
+        const params = new URLSearchParams(window.location.search);
+        log("Environment Detect: nav=" + params.get('nav'));
+
+        // URL에서 vault ID 추출 시도 (Self-Healing)
+        const pathParts = window.location.pathname.split('/');
+        const urlSlug = pathParts.find(p => p.startsWith('@'))?.replace('@', '');
+        if (urlSlug) {
+            vaultSlug = urlSlug;
+            log("Detected Vault Slug from URL: " + vaultSlug);
+        }
 
         let attempts = 0;
         const checkSDK = setInterval(async () => {
             attempts++;
             if (window.gobi) {
                 clearInterval(checkSDK);
-                log("SDK Connected. Vault: " + gobi.vaultId);
+                // SDK가 vaultId를 놓쳤을 경우 강제 주입
+                if (!gobi.vaultId) {
+                    gobi.vaultId = vaultSlug;
+                    log("Self-Healed Vault ID: " + gobi.vaultId);
+                } else {
+                    log("SDK Connected. Vault: " + gobi.vaultId);
+                }
                 await startCooking();
-            } else if (attempts > 30) {
+            } else if (attempts > 40) { // 조금 더 기다림
                 clearInterval(checkSDK);
-                log("FATAL: SDK Timeout");
-                document.getElementById('loading-msg').innerText = "Chef is away. (SDK Timeout)";
+                log("FATAL: SDK Timeout. Trying fallback rendering...");
+                await startCooking(); // SDK 없어도 시도
             }
         }, 200);
     };
@@ -256,22 +272,36 @@
         const nav = document.getElementById('nav-inner');
         main.innerHTML = "";
 
+        if (!window.gobi) {
+            main.innerHTML = "<p style='text-align:center;'>Chef is taking a break. (SDK Load Error)</p>";
+            return;
+        }
+
         for (const cat of categories) {
-            log(`Reading folder: "${cat}"`);
+            log(`Cooking category: "${cat}"`);
             let recipes = [];
 
-            // MULTI-PATH PROBE: nav=false 환경에서도 뚫리는 경로를 찾음
-            const pathsToTry = [`../${cat}`, `./${cat}`, `/${cat}`, cat];
+            // 더 공격적인 경로 탐색 (Self-Healing)
+            const pathsToTry = [
+                `../${cat}`,
+                `./${cat}`,
+                `/${cat}`,
+                cat,
+                `../../${cat}`,
+                `@${vaultSlug}/${cat}` // 절대 경로 시도
+            ];
+
             let successfulPath = null;
 
             for (const p of pathsToTry) {
                 try {
+                    log(`  Trying path: ${p}`);
                     const res = await gobi.listFiles(p);
                     const list = Array.isArray(res) ? res : (res.data || res.results || []);
                     if (list.length > 0) {
                         recipes = list.filter(f => f.name.endsWith('.md') && f.name !== 'README.md');
                         successfulPath = p;
-                        log(`  SUCCESS: Found ${recipes.length} recipes in ${p}`);
+                        log(`    SUCCESS: Found ${recipes.length} recipes in ${p}`);
                         break;
                     }
                 } catch (e) { /* continue */ }
@@ -314,10 +344,10 @@
                 sec.appendChild(grid);
                 main.appendChild(sec);
             } else {
-                log(`  Skip ${cat}: No recipes found.`);
+                log(`  Skip ${cat}: All paths exhausted.`);
             }
         }
-        log("RENDER COMPLETE.");
+        log("COOKING COMPLETE.");
     }
 
     async function openRecipe(path) {
@@ -351,3 +381,4 @@
 
 </body>
 </html>
+<!-- Last Force Sync: Mon Apr 13 23:33:40 PDT 2026 -->
