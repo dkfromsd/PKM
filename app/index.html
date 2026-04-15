@@ -7,7 +7,7 @@
     <script src="https://gobispace.com/gobi.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
         :root {
             --bg-color: #fffaf0; /* Floral White */
@@ -31,7 +31,7 @@
         .navbar {
             position: fixed;
             top: 0; width: 100%;
-            background: rgba(255, 250, 240, 0.8);
+            background: rgba(255, 250, 240, 0.9);
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
@@ -56,6 +56,10 @@
             letter-spacing: 1px;
             transition: color 0.3s;
             white-space: nowrap;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 5px 10px;
         }
 
         .nav-link:hover { color: var(--accent-color); }
@@ -140,14 +144,14 @@
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255, 250, 240, 0.98);
+            background: #fffaf0; /* Stable background */
             z-index: 2000;
             overflow-y: auto;
         }
 
         .viewer-inner {
             max-width: 800px;
-            margin: 60px auto;
+            margin: 40px auto;
             background: white;
             padding: 60px;
             box-shadow: 0 30px 60px rgba(0,0,0,0.05);
@@ -156,14 +160,15 @@
 
         .close-btn {
             position: fixed;
-            top: 30px; right: 40px;
+            top: 20px; right: 30px;
             font-size: 2.5rem;
             cursor: pointer;
             color: var(--accent-color);
             background: none; border: none;
+            z-index: 2100;
         }
 
-        .markdown-content { font-family: 'Lora', serif; font-size: 1.1rem; }
+        .markdown-content { font-family: 'Lora', serif; font-size: 1.1rem; color: #333; }
         .markdown-content h1, .markdown-content h2 { font-family: 'Cormorant Garamond', serif; color: var(--accent-color); }
         .markdown-content img { max-width: 100%; border-radius: 8px; }
         .markdown-content pre { background: #fdf6e3; padding: 20px; border-radius: 8px; overflow-x: auto; }
@@ -190,14 +195,14 @@
 
 <nav class="navbar">
     <div class="nav-inner" id="nav-inner">
-        <a href="#" class="nav-link" onclick="window.scrollTo(0,0)">Top</a>
+        <button class="nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Top</button>
     </div>
 </nav>
 
 <div class="container">
     <header>
         <h1 class="kitchen-title">Mickey's Kitchen</h1>
-        <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.75rem; color: var(--secondary-color); font-weight: 800;">Digital Brain Recipe Book v3.6 (Bulletproof Engine)</p>
+        <p style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.75rem; color: var(--secondary-color); font-weight: 800;">Digital Brain Recipe Book v3.8 (Precision Engine)</p>
     </header>
 
     <div id="kitchen-main">
@@ -242,7 +247,7 @@
         const urlSlug = pathParts.find(p => p.startsWith('@'))?.replace('@', '');
         if (urlSlug) {
             vaultSlug = urlSlug;
-            log("Detected Vault Slug from URL: " + vaultSlug);
+            log("Detected Vault Slug: " + vaultSlug);
         }
 
         let attempts = 0;
@@ -250,17 +255,13 @@
             attempts++;
             if (window.gobi) {
                 clearInterval(checkSDK);
-                if (!gobi.vaultId) {
-                    gobi.vaultId = vaultSlug;
-                    log("Self-Healed Vault ID: " + gobi.vaultId);
-                } else {
-                    log("SDK Connected. Vault: " + gobi.vaultId);
-                }
+                if (!gobi.vaultId) { gobi.vaultId = vaultSlug; }
+                log("SDK Ready. Vault: " + gobi.vaultId);
                 await startCooking();
-            } else if (attempts > 40) {
+            } else if (attempts > 50) {
                 clearInterval(checkSDK);
                 log("FATAL: SDK Timeout.");
-                await startCooking();
+                document.getElementById('loading-msg').innerText = "Chef is away. (SDK Error)";
             }
         }, 200);
     };
@@ -270,59 +271,42 @@
         const nav = document.getElementById('nav-inner');
         main.innerHTML = "";
 
-        if (!window.gobi) {
-            main.innerHTML = "<p style='text-align:center;'>Chef is taking a break. (SDK Load Error)</p>";
-            return;
-        }
-
         for (const cat of categories) {
-            log(`Cooking category: "${cat}"`);
+            log(`Reading category: "${cat}"`);
             let recipes = [];
-
-            const pathsToTry = [
-                `../${cat}`,
-                `./${cat}`,
-                `/${cat}`,
-                cat,
-                `../../${cat}`,
-                `@${vaultSlug}/${cat}`
-            ];
-
+            const pathsToTry = [`../${cat}`, `./${cat}`, `/${cat}`, cat, `../../${cat}`, `@${vaultSlug}/${cat}`];
             let successfulPath = null;
 
             for (const p of pathsToTry) {
                 try {
-                    log(`  Trying path: ${p}`);
                     const res = await gobi.listFiles(p);
                     const list = Array.isArray(res) ? res : (res.data || res.results || []);
                     if (list.length > 0) {
                         recipes = list.filter(f => f.name.endsWith('.md') && f.name !== 'README.md');
                         successfulPath = p;
-                        log(`    SUCCESS: Found ${recipes.length} recipes in ${p}`);
+                        log(`  SUCCESS: Found ${recipes.length} in ${p}`);
                         break;
                     }
-                } catch (e) { /* continue */ }
+                } catch (e) { }
             }
 
             if (recipes.length > 0) {
-                const nl = document.createElement('a');
-                nl.href = `#section-${cat}`;
-                nl.className = 'nav-link';
-                nl.innerText = cat;
-                nav.appendChild(nl);
+                const btn = document.createElement('button');
+                btn.className = 'nav-link';
+                btn.innerText = cat;
+                btn.onclick = () => document.getElementById(`section-${cat}`).scrollIntoView({behavior: 'smooth'});
+                nav.appendChild(btn);
 
                 const sec = document.createElement('section');
                 sec.id = `section-${cat}`;
                 sec.innerHTML = `<h2 class="section-title">${cat}</h2>`;
-
                 const grid = document.createElement('div');
                 grid.className = 'recipe-grid';
 
                 recipes.forEach(r => {
                     const card = document.createElement('div');
                     card.className = 'recipe-card';
-                    card.onclick = () => openRecipe(cat, r.name); // Pure cat and filename
-
+                    card.onclick = () => openRecipe(cat, r.name);
                     card.innerHTML = `
                         <div style="font-size: 0.7rem; color: var(--secondary-color); font-weight: 800; text-transform: uppercase; margin-bottom: 10px;">${cat}</div>
                         <h3>${r.name.replace('.md', '')}</h3>
@@ -334,20 +318,15 @@
                     `;
                     grid.appendChild(card);
                 });
-
                 sec.appendChild(grid);
                 main.appendChild(sec);
-            } else {
-                log(`  Skip ${cat}: All paths exhausted.`);
             }
         }
         log("COOKING COMPLETE.");
     }
 
     async function openRecipe(cat, fileName) {
-        log(`Preparing to open: ${cat}/${fileName}`);
-
-        // Multi-Path Probe for READING too!
+        log(`Plating recipe: ${cat}/${fileName}`);
         const pathsToTry = [
             `../${cat}/${fileName}`,
             `./${cat}/${fileName}`,
@@ -357,26 +336,31 @@
             `@${vaultSlug}/${cat}/${fileName}`
         ];
 
-        let content = null;
+        let rawData = null;
         let finalPath = "";
 
         for (const p of pathsToTry) {
             try {
                 log(`  Trying read path: ${p}`);
-                content = await gobi.vault.readFile(p);
-                if (content) {
+                if (gobi.vault && gobi.vault.readFile) { rawData = await gobi.vault.readFile(p); }
+                else if (gobi.vault && gobi.vault.getFileContent) { rawData = await gobi.vault.getFileContent(p); }
+                else if (gobi.readFile) { rawData = await gobi.readFile(p); }
+
+                if (rawData) {
                     finalPath = p;
                     log(`    SUCCESS reading from ${p}`);
                     break;
                 }
-            } catch (e) { /* continue */ }
+            } catch (e) { }
         }
 
-        if (!content) {
-            log(`ERROR: Failed to read ${cat}/${fileName} after all attempts`);
+        if (!rawData) {
+            log(`ERROR: Failed to read ${cat}/${fileName}`);
             alert("This recipe is still simmering. (File Error)");
             return;
         }
+
+        const content = (typeof rawData === 'object') ? (rawData.data || rawData.content || rawData.body || JSON.stringify(rawData)) : rawData;
 
         try {
             const html = marked.parse(content);
@@ -387,12 +371,13 @@
                 <div style="font-family: 'Cormorant Garamond'; text-align: center; margin-bottom: 40px;">
                     <div style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: var(--secondary-color); font-weight: 800; margin-bottom: 10px;">Recipe Detail</div>
                     <h1 style="font-size: 3.5rem; margin: 0; font-style: italic;">${fileName.replace('.md', '')}</h1>
-                    <div style="font-size: 0.7rem; color: #ccc; margin-top: 10px;">Loaded via: ${finalPath}</div>
+                    <div style="font-size: 0.7rem; color: #ccc; margin-top: 10px;">Source: ${finalPath}</div>
                 </div>
                 <div class="markdown-content">${html}</div>
             `;
             viewer.style.display = 'block';
             document.body.style.overflow = 'hidden';
+            viewer.scrollTop = 0;
         } catch (e) {
             log("ERROR: Markdown parsing failed");
         }
@@ -403,7 +388,6 @@
         document.body.style.overflow = 'auto';
     }
 </script>
-
 </body>
 </html>
-<!-- Bulletproof Path Fix: Mon Apr 13 23:45:00 PDT 2026 --><!-- Final Force Update: Mon Apr 13 23:46:16 PDT 2026 -->
+<!-- v3.8 Final Precision Applied: Tue Apr 14 00:05:00 PDT 2026 -->
