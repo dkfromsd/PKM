@@ -4,7 +4,7 @@ tags: []
 description: Notes, Codes, and the Search for Peace
 thumbnail: ./Attachments/thumb.jpg
 prompt:
-homepage: ./app/index.html?nav=false
+homepage: ./app/index.html?nav=true
 ---
 
 # 🧠 Mickey's Personal Brain

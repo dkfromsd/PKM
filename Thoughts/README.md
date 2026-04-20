@@ -3,6 +3,7 @@
 Recent reflections and personal notes.
 
 ### 📝 Latest Notes
+- ![[Thoughts/Micron_AI_Leadership_Dialogue.md]]
 - ![[Thoughts/Gobi_Homepage_101.md]]
 - ![[Thoughts/Gobi_Homepage_101_KR.md]]
 - ![[Thoughts/4기질설.md]]

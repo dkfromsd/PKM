@@ -348,6 +348,7 @@
         }, 200);
     };
 
+    let isCooking = false;
     async function startCooking() {
         if (isCooking) return;
         isCooking = true;
@@ -494,5 +495,6 @@
     }
 </script>
 </body>
+<!-- v3.9.1 Fixed isCooking ReferenceError: Sun Apr 19 2026 -->
 </html>
 <!-- v3.9 Multi-lingual Support: Sat Apr 18 2026 -->
