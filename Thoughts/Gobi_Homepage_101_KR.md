@@ -81,7 +81,6 @@ Gobi는 기본 파일 리스트 대신 사용자가 직접 만든 HTML 페이지
 
 ## 🎨 5단계: 미학적 완성도 높이기
 
-"@jyk 스타일"이나 "Mickey's Kitchen"과 같은 프리미엄 룩을 위해:
 
 1.  **타이포그래피**: 제목에는 `Playfair Display`, 본문에는 `Montserrat`와 같은 Google Fonts를 사용하여 현대적인 느낌을 줍니다.
 2.  **카드 레이아웃**: CSS Flexbox나 Grid를 사용하세요. `transition`과 `box-shadow`를 추가하여 마우스 오버 시 카드가 "튀어나오는" 효과를 줍니다.
@@ -96,12 +95,6 @@ Gobi는 기본 파일 리스트 대신 사용자가 직접 만든 HTML 페이지
 - [ ] `gobi sync`와 `gobi brain publish`를 실행하여 온라인 반영을 확인했나요?
 - [ ] 전문적인 조언이 포함된 경우 **면책 조항(Disclaimer)**을 넣었나요?
 
-> "샌드박스 제약은 벽이 아니라 퍼즐입니다." — *Mickey's Kitchen 개발팀*
-
 ---
 ## 📚 참고 문헌
-더 자세한 내용은 내부 기술 로그를 확인하세요:
-- `![[Study/Homepage_cli_skill/홈페이지 구축 - 101 gobispace cli v2.md]]`
-- `![[Study/Homepage_cli_skill/gobi-homepage-history-en-v2.md]]`
-
-🚀 **즐거운 구축(요리) 되세요!**
+더 자세한 내용은 내부 기술 로그 또는 관리자에게 문의 하세요.

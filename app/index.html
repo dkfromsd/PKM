@@ -349,68 +349,91 @@
     };
 
     async function startCooking() {
-        const main = document.getElementById('kitchen-main');
-        const nav = document.getElementById('nav-inner');
-        const t = i18n[currentLang];
+        if (isCooking) return;
+        isCooking = true;
 
-        // Keep only Top button and Lang toggle
-        const topBtn = document.getElementById('nav-top');
-        const langToggle = nav.querySelector('.lang-toggle');
-        nav.innerHTML = '';
-        nav.appendChild(topBtn);
+        try {
+            const main = document.getElementById('kitchen-main');
+            const nav = document.getElementById('nav-inner');
+            const t = i18n[currentLang];
 
-        main.innerHTML = "";
+            // Update static text first
+            applyStaticTranslations();
 
-        for (const cat of categories) {
-            log(`Reading category: "${cat}"`);
-            let recipes = [];
-            const pathsToTry = [`../${cat}`, `./${cat}`, `/${cat}`, cat, `../../${cat}`, `@${vaultSlug}/${cat}`];
+            // Clear and rebuild nav safely
+            const topBtn = document.getElementById('nav-top');
+            const langToggle = nav.querySelector('.lang-toggle');
 
-            for (const p of pathsToTry) {
-                try {
-                    const res = await gobi.listFiles(p);
-                    const list = Array.isArray(res) ? res : (res.data || res.results || []);
-                    if (list.length > 0) {
-                        recipes = list.filter(f => f.name.endsWith('.md') && f.name !== 'README.md');
-                        break;
-                    }
-                } catch (e) { }
+            // Remove existing category buttons to prevent duplication
+            const existingLinks = nav.querySelectorAll('.nav-link:not(#nav-top)');
+            existingLinks.forEach(l => l.remove());
+
+            // Temporary container to hold new buttons before re-attaching langToggle
+            const fragment = document.createDocumentFragment();
+
+            main.innerHTML = "";
+
+            for (const cat of categories) {
+                log(`Reading category: "${cat}"`);
+                let recipes = [];
+                const pathsToTry = [`../${cat}`, `./${cat}`, `/${cat}`, cat, `../../${cat}`, `@${vaultSlug}/${cat}`];
+
+                for (const p of pathsToTry) {
+                    try {
+                        const res = await gobi.listFiles(p);
+                        const list = Array.isArray(res) ? res : (res.data || res.results || []);
+                        if (list.length > 0) {
+                            recipes = list.filter(f => f.name.endsWith('.md') && f.name !== 'README.md');
+                            break;
+                        }
+                    } catch (e) { }
+                }
+
+                if (recipes.length > 0) {
+                    const btn = document.createElement('button');
+                    btn.className = 'nav-link';
+                    btn.innerText = cat;
+                    btn.onclick = () => {
+                        const target = document.getElementById(`section-${cat}`);
+                        if (target) target.scrollIntoView({behavior: 'smooth'});
+                    };
+                    fragment.appendChild(btn);
+
+                    const sec = document.createElement('section');
+                    sec.id = `section-${cat}`;
+                    sec.innerHTML = `<h2 class="section-title">${cat}</h2>`;
+                    const grid = document.createElement('div');
+                    grid.className = 'recipe-grid';
+
+                    recipes.forEach(r => {
+                        const card = document.createElement('div');
+                        card.className = 'recipe-card';
+                        card.onclick = () => openRecipe(cat, r.name);
+                        card.innerHTML = `
+                            <div style="font-size: 0.7rem; color: var(--secondary-color); font-weight: 800; text-transform: uppercase; margin-bottom: 10px;">${t.discover}${cat}</div>
+                            <h3>${r.name.replace('.md', '')}</h3>
+                            <div class="snippet">${t.snippetPrefix}${cat}...</div>
+                            <div class="footer">
+                                <span>${(r.size / 1024).toFixed(1)} KB</span>
+                                <span>${t.viewRecipe}</span>
+                            </div>
+                        `;
+                        grid.appendChild(card);
+                    });
+                    sec.appendChild(grid);
+                    main.appendChild(sec);
+                }
             }
 
-            if (recipes.length > 0) {
-                const btn = document.createElement('button');
-                btn.className = 'nav-link';
-                btn.innerText = cat;
-                btn.onclick = () => document.getElementById(`section-${cat}`).scrollIntoView({behavior: 'smooth'});
-                nav.appendChild(btn);
+            // Add category buttons back to nav
+            nav.insertBefore(fragment, langToggle);
 
-                const sec = document.createElement('section');
-                sec.id = `section-${cat}`;
-                sec.innerHTML = `<h2 class="section-title">${cat}</h2>`;
-                const grid = document.createElement('div');
-                grid.className = 'recipe-grid';
-
-                recipes.forEach(r => {
-                    const card = document.createElement('div');
-                    card.className = 'recipe-card';
-                    card.onclick = () => openRecipe(cat, r.name);
-                    card.innerHTML = `
-                        <div style="font-size: 0.7rem; color: var(--secondary-color); font-weight: 800; text-transform: uppercase; margin-bottom: 10px;">${t.discover}${cat}</div>
-                        <h3>${r.name.replace('.md', '')}</h3>
-                        <div class="snippet">${t.snippetPrefix}${cat}...</div>
-                        <div class="footer">
-                            <span>${(r.size / 1024).toFixed(1)} KB</span>
-                            <span>${t.viewRecipe}</span>
-                        </div>
-                    `;
-                    grid.appendChild(card);
-                });
-                sec.appendChild(grid);
-                main.appendChild(sec);
-            }
+            log(t.cookingComplete);
+        } catch (err) {
+            log("Cooking Error: " + err.message);
+        } finally {
+            isCooking = false;
         }
-        nav.appendChild(langToggle);
-        log(t.cookingComplete);
     }
 
     async function openRecipe(cat, fileName) {
