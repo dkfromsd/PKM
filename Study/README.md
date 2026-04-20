@@ -10,6 +10,8 @@ Architecture, Infrastructure as Code, and Deep Learning research.
 
 ## 📝 Research & Notes
 
+- [[study_notes/college-math-science-lecture-en.md|Advanced Math & Science for AI (EN)]]
+- [[study_notes/12-month-curriculum.md|12-Month Mastery Curriculum]]
 - [[Study/비정형 데이터를 위한 그래프 레이어 접근 분석.md|Graph Layer Approach Analysis]]
 - [[Study/비정형데이터 시계열 분해.md|Unstructured Data Time-Series Decomposition]]
 - [[Study/코드 Review bot.md|Code Review Bot implementation]]
