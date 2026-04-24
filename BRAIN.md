@@ -39,6 +39,7 @@ Jazz theory, classical repertoire, and soundtrack analysis.
 
 ### 📚 [[Study/README.md|Study Dashboard]]
 Architecture, Infrastructure as Code, and AI research.
+- **[[study_notes/README.md|📓 Private Research Hub]]** (Internal Study & Drafts)
 ![[Study/README.md]]
 
 ### 📝 [[Thoughts/README.md|Thoughts Dashboard]]
