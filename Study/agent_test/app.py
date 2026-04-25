@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from datetime import datetime
 import os
 from dotenv import load_dotenv
@@ -17,7 +17,7 @@ mock_trends = [
 
 @app.route('/')
 def home():
-    return "AI-Trend Stock Tracker API is running."
+    return render_template('index.html')
 
 @app.route('/api/v1/trends', methods=['GET'])
 def get_trends():
