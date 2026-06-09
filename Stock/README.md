@@ -1,19 +1,13 @@
 > [!IMPORTANT] Disclaimer
-> 본 내용은 투자 자문이나 추천이 아니면 개인적인 분석을 토대로 한 지극히 일부의 의견이므로 실거래 손실은 사용자 책임이에요
+> 본 내용은 투자 자문이나 추천이 아니며, 개인적인 분석을 토대로 한 지극히 주관적인 의견이므로 실거래 손실은 사용자 책임입니다.
 
-# 📈 Stock Analysis Dashboard
+# 🤖 StockBot Dashboard
+자동화된 금융 분석 리포트, 데이터 수집 및 분석 에이전트, 분석 결과 관리 허브.
 
-Welcome to the Stock analysis dashboard. Below is a live view of the latest reports.
+## 프로젝트 구조
+- `Stock_Agent/`: 자동화된 주식 분석을 위한 스크립트 및 에이전트 모델.
+- `Stock_input/`: 원본 시장 데이터 및 시장 스냅샷 수집 공간.
+- `Stock_output/`: 처리된 분석 리포트 및 전략 요약본 저장소.
 
-## 🏢 Enterprise Analysis: AROC & OKE
-![[Stock/AROC.OKE.md]]
-
-## 🚀 Space Industry: ASTS & RKLB
-![[Stock/ASTS.RKLB.md]]
-
----
-### All Reports
-- [[Stock/AROC.OKE.md|AROC & OKE Analysis]]
-- [[Stock/ASTS.RKLB.md|ASTS & RKLB Analysis]]
-- [[Stock/ATI.WHM.CRS.md|ATI & WHM & CRS]]
-- [[Stock/AXTI.md|AXTI Analysis]]
+## 📊 최신 분석 리포트
+(분석 결과는 `Stock_output/` 폴더 내의 최신 파일들을 참조하세요.)

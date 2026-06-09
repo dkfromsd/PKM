@@ -25,34 +25,34 @@ Digital Brain Recipe Style Gobi SDK Homepage.
 
 ## 🛠️ PKM Structure (Active)
 
-### 📈 [[Stock/README.md|Stock Dashboard]]
+### 📈 [[Stock/Stock_input/README|Stock Dashboard]]
 Market analysis, investment strategies, and portfolio management.
-![[Stock/README.md]]
+![[Stock/Stock_input/README]]
 
-### 🤖 [[StockBot/README.md|StockBot Dashboard]]
+### 🤖 [[Stock/README|StockBot Dashboard]]
 Automated financial analysis reports.
-![[StockBot/README.md]]
+![[Stock/README]]
 
-### 🎹 [[Music/README.md|Music Dashboard]]
+### 🎹 [[Docs/Music/README|Music Dashboard]]
 Jazz theory, classical repertoire, and soundtrack analysis.
-![[Music/README.md]]
+![[Docs/Music/README]]
 
 ### 📚 [[Study/README.md|Study Dashboard]]
 Architecture, Infrastructure as Code, and AI research.
 - **[[study_notes/README.md|📓 Private Research Hub]]** (Internal Study & Drafts)
 ![[Study/README.md]]
 
-### 📝 [[Thoughts/README.md|Thoughts Dashboard]]
+### 📝 [[Docs/Thoughts/README|Thoughts Dashboard]]
 Personal reflections, notes, and intellectual deep dives.
-![[Thoughts/README.md]]
+![[Docs/Thoughts/README]]
 
-### 🎨 [[Illustration/README.md|Illustration Dashboard]]
+### 🎨 [[Docs/Illustration/README|Illustration Dashboard]]
 Drawing practice, art archives, and style analysis.
-![[Illustration/README.md]]
+![[Docs/Illustration/README]]
 
-### 🧘 [[Health/README.md|Health Dashboard]]
+### 🧘 [[Docs/Health/README|Health Dashboard]]
 Exercise routines, nutrition, and wellness.
-![[Health/README.md]]
+![[Docs/Health/README]]
 
 ---
 
