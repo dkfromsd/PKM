@@ -1,4 +1,4 @@
-
+> ↩ [[0927-2026 - Bossa Nova.Samba.Tango|감상회 프로그램]] · [[0926-2026 -  60 minutes|60분 해설 스크립트]] · 관련 아티스트: [[Artist - Carlos Gardel]] · [[Artist - Gerardo Matos Rodriguez]]
 
 # 아스토르 피아졸라 (Astor Piazzolla, 1921–1992)
 
@@ -109,7 +109,7 @@
 - 1974년 5월: 밀라노에서 **〈Libertango〉** 를 녹음했습니다. 'Libertad(자유)'와 'Tango'를 합친 제목으로, 전통에서 벗어난 자유를 선언한 곡입니다.
 - 1978년: 제2기 퀸텟을 결성해 약 11년 동안 세계를 순회했습니다.
 - 1982년: 첼리스트 므스티슬라프 로스트로포비치에게 헌정한 첼로·피아노곡 **《Le Grand Tango》** 를 썼습니다(1990년 초연).
-- 1984년: 이탈리아 영화 《엔리코 4세》를 위해 **〈Oblivion(망각)〉** 을 썼습니다.
+- 1984년: 1982년에 쓴 **〈Oblivion(망각)〉** 이 마르코 벨로키오 감독의 이탈리아 영화 《엔리코 4세》에 쓰였습니다. 같은 해 9월 파리에서 밀바가 프랑스어 가사로 불러 널리 알려졌습니다.
 - 1986년: 제2기 퀸텟과 **《Tango: Zero Hour》** 를 녹음했습니다. 피아졸라 자신이 "지금까지 만든 최고의 음반"이라고 부른 앨범입니다. 같은 해 플루트와 기타를 위한 **《Histoire du Tango》** 를 썼습니다    
 
 ### 6. 마지막 시기와 유산 (1989 ~ 현재)
@@ -131,7 +131,7 @@
 |---|---|---|---|---|
 |1|Libertango|1974|반복되는 리듬 오스티나토 위의 강렬한 선율. 피아졸라 입문곡|[피아졸라 원곡](https://www.youtube.com/results?search_query=Astor+Piazzolla+Libertango+1974) · [요요마](https://www.youtube.com/results?search_query=Yo-Yo+Ma+Libertango)|
 |2|Adiós Nonino|1959|아버지를 잃은 슬픔. 격렬한 리듬부와 서정적인 선율부의 대비|[피아졸라 라이브](https://www.youtube.com/results?search_query=Astor+Piazzolla+Adios+Nonino+live)|
-|3|Oblivion|1984|느리고 우수 어린 밀롱가. 클래식 연주자들이 사랑하는 곡|[피아졸라](https://www.youtube.com/results?search_query=Astor+Piazzolla+Oblivion)|
+|3|Oblivion|1982|느리고 우수 어린 밀롱가. 클래식 연주자들이 사랑하는 곡|[피아졸라](https://www.youtube.com/results?search_query=Astor+Piazzolla+Oblivion)|
 |4|Verano Porteño (부에노스아이레스의 여름)|1965|《사계》의 첫 곡|[YouTube](https://www.youtube.com/results?search_query=Piazzolla+Verano+Porteno)|
 |5|Invierno Porteño (부에노스아이레스의 겨울)|1970|비발디 《사계》와 비교 감상하기 좋은 곡|[YouTube](https://www.youtube.com/results?search_query=Piazzolla+Invierno+Porteno) · [기돈 크레머 'Eight Seasons'](https://www.youtube.com/results?search_query=Gidon+Kremer+Eight+Seasons+Vivaldi+Piazzolla)|
 |6|Balada para un loco|1969|가사: 오라시오 페레르. 낭송과 노래가 섞인 탱고 발라드|[Amelita Baltar](https://www.youtube.com/results?search_query=Balada+para+un+loco+Amelita+Baltar+Piazzolla) · 📝 [가사](https://www.letras.com/?q=Balada%20para%20un%20loco)|
@@ -144,4 +144,3 @@
 
 ---
 
-**

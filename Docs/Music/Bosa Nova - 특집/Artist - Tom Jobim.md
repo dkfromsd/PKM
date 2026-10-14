@@ -1,3 +1,4 @@
+> ↩ [[0927-2026 - Bossa Nova.Samba.Tango|감상회 프로그램]] · [[0926-2026 -  60 minutes|60분 해설 스크립트]] · 관련 아티스트: [[Artist - Vinicius de Moraes]] · [[Artist - Getz and Gilberto]] · [[Artist - Luiz Bonfa]] · [[Artist - Marcos Valle]]
 
 ---
 
@@ -157,8 +158,6 @@ https://www.youtube.com/watch?v=mN5iLTA_tkA&list=RDmN5iLTA_tkA&start_radio=1
 - **라디오 황금기(1930~40년대):** 노엘 호자의 재치 있는 도시 삼바가 나왔습니다. 아리 바호주의 〈Aquarela do Brasil〉(1939) 같은 웅장한 '삼바-엑살타상(조국 찬가 삼바)'도 이때 등장했고, 카르멘 미란다가 이 소리를 할리우드로 가져갔습니다.
 
 ### 2. 삼바-칸성: 춤추는 삼바에서 듣는 삼바로
-
-**
 
 삼바-칸성은 1920년대 말에 등장했습니다. 〈Linda Flor (Ai, Ioiô)〉가 흔히 첫 곡으로 꼽히고, 1940년대 후반~1950년대에 전성기를 맞았습니다. 무대는 거리와 카니발에서 코파카바나의 나이트클럽(boate)과 라디오 스튜디오로 옮겨갔습니다.
 

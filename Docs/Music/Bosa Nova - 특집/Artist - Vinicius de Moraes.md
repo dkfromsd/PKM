@@ -1,3 +1,4 @@
+> ↩ [[0927-2026 - Bossa Nova.Samba.Tango|감상회 프로그램]] · [[0926-2026 -  60 minutes|60분 해설 스크립트]] · 관련 아티스트: [[Artist - Tom Jobim]] · [[Artist - Baden Powell]] · [[Artist - Luiz Bonfa]]
 
 비니시우스 지 모라이스(Vinícius de Moraes, 1913~1980)는 음악가이자 시인일 뿐만 아니라, **브라질 외교부(Itamaraty) 소속의 정식 외교관**이었습니다.
 
@@ -22,7 +23,7 @@
     
     - 1956년 비니시우스가 쓴 연극 《흑인 오르페우스(Orfeu da Conceição)》의 음악을 맡길 연주자를 찾던 중 청년 **톰 조빔**을 만나면서 역사적인 컴비가 탄생합니다.
         
-    - 두 사람은 세상에서 가장 유명한 보사노바 명곡인 **〈Garota de Ipanema (이파네마에서 온 소녀)〉**, **〈Chega de Saudade〉**, **〈Insensatez〉**, **〈Desafinado〉** 등을 함께 만들었습니다. 비니시우스가 가사를 쓰고 조빔이 작곡을 담당했습니다.
+    - 두 사람은 세상에서 가장 유명한 보사노바 명곡인 **〈Garota de Ipanema (이파네마에서 온 소녀)〉**, **〈Chega de Saudade〉**, **〈Insensatez〉** 등을 함께 만들었습니다. 비니시우스가 가사를 쓰고 조빔이 작곡을 담당했습니다. (〈Desafinado〉는 조빔 작곡에 가사는 뉴턴 멘돈사가 썼습니다.)
         
 - **바덴 파웰(Baden Powell)과의 만남**:
     

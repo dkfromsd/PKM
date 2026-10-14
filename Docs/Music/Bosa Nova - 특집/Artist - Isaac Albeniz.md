@@ -1,3 +1,4 @@
+> ↩ [[0927-2026 - Bossa Nova.Samba.Tango|감상회 프로그램]] · [[0926-2026 -  60 minutes|60분 해설 스크립트]] · 관련 아티스트: [[Artist - Astor Piazzolla]] · [[Artist - Gerardo Matos Rodriguez]]
 
 "Tango in D, Op. 165, No. 2"를 작곡한 인물은 ==**스페인의 천재 피아니스트이자 작곡가인 이사크 알베니스(Isaac Albéniz, 1860~1909)**==입니다. [[1](https://www.windrep.org/Tango_in_D), [2](https://namu.wiki/w/%EC%9D%B4%EC%82%AD%20%EC%95%8C%EB%B2%A0%EB%8B%88%EC%8A%A4)]
 

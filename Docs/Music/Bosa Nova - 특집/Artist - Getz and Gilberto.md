@@ -1,3 +1,4 @@
+> ↩ [[0927-2026 - Bossa Nova.Samba.Tango|감상회 프로그램]] · [[0926-2026 -  60 minutes|60분 해설 스크립트]] · 관련 아티스트: [[Artist - Tom Jobim]] · [[Artist - Vinicius de Moraes]] · [[Artist - Luiz Bonfa]]
 
 ---
 
@@ -25,7 +26,7 @@ https://open.spotify.com/playlist/5K46vvdaOBS1W3Oi1tn5vq?si=s5n8gfMuQBCCDRvsgkOR
 
 - 수록곡 8곡 중 6곡을 작곡했고, 피아노를 연주했습니다. 앨범의 음악적 설계자라 할 수 있습니다.
 - 녹음 현장에서 영어를 잘하지 못하는 주앙과 미국 스태프 사이의 통역도 맡았다고 합니다.
-- 👉 자세한 생애는 별도 자료 antonio_carlos_jobim 참고하세요.
+- 👉 자세한 생애는 별도 자료 [[Artist - Tom Jobim]] 참고하세요.
     
 
 ### 🎤 아스트루드 질베르토 (Astrud Gilberto, 1940–2023)

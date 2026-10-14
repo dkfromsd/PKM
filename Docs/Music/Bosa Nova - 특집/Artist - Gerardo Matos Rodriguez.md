@@ -1,4 +1,4 @@
-
+> ↩ [[0927-2026 - Bossa Nova.Samba.Tango|감상회 프로그램]] · [[0926-2026 -  60 minutes|60분 해설 스크립트]] · 관련 아티스트: [[Artist - Carlos Gardel]] · [[Artist - Astor Piazzolla]]
 
 ---
 헤라르도 마토스 로드리게스(Gerardo Hernán Matos Rodríguez, 1897~1948)는 전 세계에서 가장 유명한 탱고 곡 〈라 쿰파르시타(La Cumparsita)〉를 만든 우루과이 출신의 작곡가이자 피아니스트, 언론인, 외교관입니다.

@@ -1,3 +1,4 @@
+> ↩ [[0927-2026 - Bossa Nova.Samba.Tango|감상회 프로그램]] · [[0926-2026 -  60 minutes|60분 해설 스크립트]] · 관련 아티스트: [[Artist - Tom Jobim]] · [[Artist - Vinicius de Moraes]] · [[Artist - Getz and Gilberto]]
 
 ---
 

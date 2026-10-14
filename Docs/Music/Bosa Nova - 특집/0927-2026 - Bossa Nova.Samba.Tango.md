@@ -3,6 +3,8 @@
 
 Sep 27, 2026 · @Dokyu Lee
 
+> 연결 문서: [[0927-2026 - Bossa Nova.Samba.Tango|감상회 프로그램]] · [[0926-2026 -  60 minutes|60분 해설 스크립트]] · [[0926-2026 - Latin America|남미 음악 심화]] · [[0925-2026 - Rhythm and Intro|리듬 입문]]
+
 브라질 음악은 아프리카의 타악 전통과 유럽의 멜로디·화성이 만나 태어났다. 오늘은 삼바에서 보사노바로, 그리고 같은 뿌리에서 갈라진 탱고까지 한 시간 동안 들어 본다. 키워드는 두 가지, **사우다지(saudade, 그리움)** 와 **싱코페이션(당김음)** 다. "슬픈데 몸이 흔들리는" 이유가 여기 있다.
 
 ## 오늘의 프로그램 (60분)
@@ -40,6 +42,8 @@ Sep 27, 2026 · @Dokyu Lee
 
 1958년 리우, 세 사람이 삼바를 기타 한 대와 속삭이는 목소리로 압축했다. 작곡가 안토니우 카를루스 조빙, 시인 비니시우스 지 모라이스, 기타리스트 주앙 지우베르투다. "보사노바"는 "새로운 방식"이라는 뜻이다.
 
+아티스트 노트: [[Artist - Tom Jobim|톰 조빙]] · [[Artist - Vinicius de Moraes|비니시우스 지 모라이스]] · [[Artist - Getz and Gilberto|주앙 지우베르투 & 스탠 게츠]] · [[Artist - Luiz Bonfa|루이스 본파]] · [[Artist - Marcos Valle|마르코스 발리]]
+
 - **탄생**: [Chega de Saudade](https://www.youtube.com/results?search_query=Chega+de+Saudade+Joao+Gilberto+1958)(1958, "그리움은 이제 그만"), [Desafinado](https://www.youtube.com/results?search_query=Desafinado+Joao+Gilberto+1959)(1959, "음치"라는 비난에 대한 재치있는 반박)
 - **프랑스 영화**: _흑인 오르페_(1959, 칸 황금종려상)의 [Manhã de Carnaval](https://www.youtube.com/results?search_query=Manha+de+Carnaval+Luiz+Bonfa+Orfeu+Negro)이 세계에 보사노바를 처음 알렸다.
 - **미국 재즈**: 스탠 게츠와 만난 _Getz/Gilberto_(1964)의 [The Girl from Ipanema](https://www.youtube.com/results?search_query=The+Girl+from+Ipanema+Getz+Gilberto+Astrud)가 그래미 올해의 앨범·레코드를 받았다. 1967년에는 조빙이 시나트라의 TV 특집에 나왔다 ([영상](https://www.youtube.com/watch?v=GuEwOIAEOO4)).
@@ -50,6 +54,8 @@ Sep 27, 2026 · @Dokyu Lee
 ## 3. 하바네라에서 탱고로
 
 브라질 음악과 탱고는 19세기 남미 항구도시라는 같은 용광로에서 나온 형제다. 공통 조상은 쿠바의 **하바네라**다.
+
+아티스트 노트: [[Artist - Isaac Albeniz|이사크 알베니스]] · [[Artist - Gerardo Matos Rodriguez|헤라르도 마토스 로드리게스 (La Cumparsita)]] · [[Artist - Carlos Gardel|카를로스 가르델]]
 
 - **유럽으로**: 비제의 오페라 _카르멘_(1875) 아리아 ["사랑은 자유로운 새"](https://www.youtube.com/results?search_query=Carmen+Habanera+L%27amour+est+un+oiseau+rebelle)가 가장 유명한 하바네라다. 알베니스의 [Tango in D](https://www.youtube.com/results?search_query=Albeniz+Tango+in+D+Op+165)(1890)는 이름은 탱고지만 반주는 하바네라 리듬이다. 당시엔 두 말이 거의 같은 춤곡을 가리켰다.
 - **아르헨티나·우루과이로**: 하바네라 + 아프리카계 칸돔베 + 밀롱가 → 탱고. [La Cumparsita](https://www.youtube.com/results?search_query=La+Cumparsita+tango)(1916)는 모두가 아는 그 탱고다.
@@ -64,7 +70,7 @@ Sep 27, 2026 · @Dokyu Lee
 
 ### 피아졸라: 탱고를 무도회장에서 연주회장으로
 
-아스토르 피아졸라(1921–1992)는 춤곡이던 탱고에 클래식의 대위법과 재즈의 즉흥을 더해 감상용 예술 음악으로 바꿨다. "누에보 탱고(새로운 탱고)"다. 1954년 파리에서 나디아 불랑제가 "당신의 재능은 탱고에 있다"고 권한 것이 전환점이었다. 처음에는 "이건 탱고가 아니다"는 비난을 받았지만 유럽·미국에서 먼저 인정받았고, 지금은 아르헨티나의 자랑이다 ([Wikipedia](https://en.wikipedia.org/wiki/Astor_Piazzolla)).
+아스토르 피아졸라(1921–1992)는 춤곡이던 탱고에 클래식의 대위법과 재즈의 즉흥을 더해 감상용 예술 음악으로 바꿨다. "누에보 탱고(새로운 탱고)"다. 1954년 파리에서 나디아 불랑제가 "당신의 재능은 탱고에 있다"고 권한 것이 전환점이었다. 처음에는 "이건 탱고가 아니다"는 비난을 받았지만 유럽·미국에서 먼저 인정받았고, 지금은 아르헨티나의 자랑이다 ([Wikipedia](https://en.wikipedia.org/wiki/Astor_Piazzolla)). → [[Artist - Astor Piazzolla|아티스트 노트: 피아졸라]]
 
 |   |   |
 |---|---|
@@ -103,8 +109,8 @@ Sep 27, 2026 · @Dokyu Lee
 
 ### 마무리 두 곡
 
-- [**Tea for Two**](https://www.youtube.com/watch?v=qkBpen0sRo0) **— 오노 리사**: 상파울루에서 태어나 브라질과 일본을 오가며 자란 가수가 미국 스탠더드를 보사노바로 불렀다. "도시를 떠난 둘만의 작은 집에서 차 한 잔"이라는 소박한 꿈을 노래한다.
-- [**Águas de Março**](https://www.youtube.com/results?search_query=Aguas+de+Marco+Elis+Regina+Tom+Jobim+1974) **— 엘리스 레지나 & 톰 조빙 (1974)**: "3월의 물"은 브라질 여름이 끝나는 3월의 폭우다. 남반구라서 3월은 가을의 시작이다. 나뭇가지, 돌, 길의 끝 같은 사물을 끝없이 나열하다가, 마지막에 "그대 마음속의 삶의 약속"으로 끝난다. 슬픔과 희망이 함께 가는 보사노바의 마음으로 감상회를 닫는다.
+- [**Tea for Two**](https://www.youtube.com/watch?v=qkBpen0sRo0) **— [[Artist - Lisa Ono|오노 리사]]**: 상파울루에서 태어나 브라질과 일본을 오가며 자란 가수가 미국 스탠더드를 보사노바로 불렀다. "도시를 떠난 둘만의 작은 집에서 차 한 잔"이라는 소박한 꿈을 노래한다.
+- [**Águas de Março**](https://www.youtube.com/results?search_query=Aguas+de+Marco+Elis+Regina+Tom+Jobim+1974) **— 엘리스 레지나 & [[Artist - Tom Jobim|톰 조빙]] (1974)**: "3월의 물"은 브라질 여름이 끝나는 3월의 폭우다. 남반구라서 3월은 가을의 시작이다. 나뭇가지, 돌, 길의 끝 같은 사물을 끝없이 나열하다가, 마지막에 "그대 마음속의 삶의 약속"으로 끝난다. 슬픔과 희망이 함께 가는 보사노바의 마음으로 감상회를 닫는다.
 
 ## 오늘 틀 곡 목록
 
@@ -113,35 +119,35 @@ Sep 27, 2026 · @Dokyu Lee
 |#|곡|아티스트|연도|장르|
 |1|[Pelo Telefone](https://www.youtube.com/results?search_query=Pelo+Telefone+1917+Baiano)|바이아노|1917|삼바|
 |2|[Aquarela do Brasil](https://www.youtube.com/results?search_query=Aquarela+do+Brasil+Ary+Barroso)|아리 바호주|1939|삼바|
-|3|[Chega de Saudade](https://www.youtube.com/results?search_query=Chega+de+Saudade+Joao+Gilberto+1958)|주앙 지우베르투|1958|보사노바|
-|4|[Desafinado](https://www.youtube.com/results?search_query=Desafinado+Joao+Gilberto+1959)|주앙 지우베르투|1959|보사노바|
-|5|[The Girl from Ipanema](https://www.youtube.com/results?search_query=The+Girl+from+Ipanema+Getz+Gilberto+Astrud)|게츠 & 지우베르투|1964|보사노바|
-|6|[Samba de Verão](https://www.youtube.com/results?search_query=Samba+de+Verao+Marcos+Valle)|마르코스 발리|1965|삼바|
+|3|[Chega de Saudade](https://www.youtube.com/results?search_query=Chega+de+Saudade+Joao+Gilberto+1958)|[[Artist - Getz and Gilberto\|주앙 지우베르투]]|1958|보사노바|
+|4|[Desafinado](https://www.youtube.com/results?search_query=Desafinado+Joao+Gilberto+1959)|[[Artist - Getz and Gilberto\|주앙 지우베르투]]|1959|보사노바|
+|5|[The Girl from Ipanema](https://www.youtube.com/results?search_query=The+Girl+from+Ipanema+Getz+Gilberto+Astrud)|[[Artist - Getz and Gilberto\|게츠 & 지우베르투]]|1964|보사노바|
+|6|[Samba de Verão](https://www.youtube.com/results?search_query=Samba+de+Verao+Marcos+Valle)|[[Artist - Marcos Valle\|마르코스 발리]]|1965|삼바|
 |7|[Mas Que Nada](https://www.youtube.com/results?search_query=Mas+Que+Nada+Sergio+Mendes+Brasil+66)|세르지우 멘지스 & 브라질 '66|1966|삼바|
 |8|[카르멘 "하바네라"](https://www.youtube.com/results?search_query=Carmen+Habanera+Bizet)|비제|1875|하바네라|
-|9|[Libertango](https://www.youtube.com/watch?v=t83XjF04r80)|피아졸라|1974|탱고|
-|10|[Oblivion](https://www.youtube.com/watch?v=Hj7B3jhbAHA)|피아졸라|1982|탱고|
-|11|[Insensatez](https://www.youtube.com/results?search_query=Insensatez+Jobim)|조빙|1961|보사노바|
-|12|[Tea for Two](https://www.youtube.com/watch?v=qkBpen0sRo0)|오노 리사|1990년대|보사노바|
-|13|[Águas de Março](https://www.youtube.com/results?search_query=Aguas+de+Marco+Elis+Regina+Tom+Jobim+1974)|엘리스 레지나 & 톰 조빙|1974|보사노바|
+|9|[Libertango](https://www.youtube.com/watch?v=t83XjF04r80)|[[Artist - Astor Piazzolla\|피아졸라]]|1974|탱고|
+|10|[Oblivion](https://www.youtube.com/watch?v=Hj7B3jhbAHA)|[[Artist - Astor Piazzolla\|피아졸라]]|1982|탱고|
+|11|[Insensatez](https://www.youtube.com/results?search_query=Insensatez+Jobim)|[[Artist - Tom Jobim\|조빙]]|1961|보사노바|
+|12|[Tea for Two](https://www.youtube.com/watch?v=qkBpen0sRo0)|[[Artist - Lisa Ono\|오노 리사]]|1990년대|보사노바|
+|13|[Águas de Março](https://www.youtube.com/results?search_query=Aguas+de+Marco+Elis+Regina+Tom+Jobim+1974)|엘리스 레지나 & [[Artist - Tom Jobim\|톰 조빙]]|1974|보사노바|
 
-더 깊이 들어가고 싶다면: 자세한 자료— 60분 음악 감상 강의
+더 깊이 들어가고 싶다면: [[0926-2026 -  60 minutes|자세한 자료 — 60분 음악 감상 강의]]
 
 ### 5. 탱고·클래식 보충 리스트 (선택)
 
-위 14곡은 그대로 두고, 4부(탱고)를 늘리거나 곡을 교체할 때 고를 후보다. 연도순으로 놓으면 스페인의 하바네라식 탱고 → 브라질 탱고 → 아르헨티나 탱고 → 클래식 연주회장으로 가는 흐름이 보인다.
+위 13곡은 그대로 두고, 3부(하바네라에서 탱고로)를 늘리거나 곡을 교체할 때 고를 후보다. 연도순으로 놓으면 스페인의 하바네라식 탱고 → 브라질 탱고 → 아르헨티나 탱고 → 클래식 연주회장으로 가는 흐름이 보인다.
 
 |   |   |   |   |   |
 |---|---|---|---|---|
 |#|곡 (유튜브)|작곡 · 추천 연주|연도|들을 포인트|
-|T1|[Tango in D (Op. 165-2)](https://www.youtube.com/results?search_query=Albeniz+Tango+in+D+Op+165)|알베니스 (피아노 원곡, [고도프스키 편곡](https://www.youtube.com/results?search_query=Albeniz+Tango+Godowsky))|1890|연주회용 "탱고"의 원조, 하바네라 리듬|
+|T1|[Tango in D (Op. 165-2)](https://www.youtube.com/results?search_query=Albeniz+Tango+in+D+Op+165)|[[Artist - Isaac Albeniz\|알베니스]] (피아노 원곡, [고도프스키 편곡](https://www.youtube.com/results?search_query=Albeniz+Tango+Godowsky))|1890|연주회용 "탱고"의 원조, 하바네라 리듬|
 |T2|[Brejeiro](https://www.youtube.com/results?search_query=Brejeiro+Nazareth+Centrum+Choro+2011)|나자렛 (2011 센트럼 쇼루 축제 실황)|1893|"브라질 탱고", 쇼루의 전신|
 |T3|[Odeon](https://www.youtube.com/watch?v=P96sx8zhZC4)|나자렛 (폴 바튼 피아노)|1909|영화관 대기실에서 연주되던 마시세|
-|T4|[La Cumparsita](https://www.youtube.com/results?search_query=La+Cumparsita+tango)|헤라르도 마토스 로드리게스 (우루과이)|1916|모두가 아는 그 탱고. 1917 Pelo Telefone와 나란히|
+|T4|[La Cumparsita](https://www.youtube.com/results?search_query=La+Cumparsita+tango)|[[Artist - Gerardo Matos Rodriguez\|헤라르도 마토스 로드리게스]] (우루과이)|1916|모두가 아는 그 탱고. 1917 Pelo Telefone와 나란히|
 |T5|[Le Bœuf sur le toit](https://www.youtube.com/results?search_query=Milhaud+Le+Boeuf+sur+le+toit+Alondra+de+la+Parra+Orchestre+de+Paris)|미요 (알론드라 데 라 파라 / 파리 관현악단)|1920|클래식이 브라질 탱고를 인용한 순간|
-|T6|[Le Grand Tango](https://www.youtube.com/results?search_query=Piazzolla+Le+Grand+Tango+Yuja+Wang)|피아졸라 (유자 왕 버전 추천 · [요요 마 버전](https://www.youtube.com/results?search_query=Yo-Yo+Ma+Le+Grand+Tango))|1982|클래식 연주회장의 탱고|
-|T7|[Histoire du Tango — Nightclub 1960](https://www.youtube.com/results?search_query=Piazzolla+Histoire+du+Tango+Nightclub+1960)|피아졸라|1985–86|탱고와 보사노바가 만난 시대|
-|T8|[Libertango (Soul of the Tango)](https://www.youtube.com/results?search_query=Yo-Yo+Ma+Libertango+Soul+of+the+Tango)|피아졸라 / 요요 마|1974 (1997)|첼로로 듣는 누에보 탱고|
+|T6|[Le Grand Tango](https://www.youtube.com/results?search_query=Piazzolla+Le+Grand+Tango+Yuja+Wang)|[[Artist - Astor Piazzolla\|피아졸라]] (유자 왕 버전 추천 · [요요 마 버전](https://www.youtube.com/results?search_query=Yo-Yo+Ma+Le+Grand+Tango))|1982|클래식 연주회장의 탱고|
+|T7|[Histoire du Tango — Nightclub 1960](https://www.youtube.com/results?search_query=Piazzolla+Histoire+du+Tango+Nightclub+1960)|[[Artist - Astor Piazzolla\|피아졸라]]|1985–86|탱고와 보사노바가 만난 시대|
+|T8|[Libertango (Soul of the Tango)](https://www.youtube.com/results?search_query=Yo-Yo+Ma+Libertango+Soul+of+the+Tango)|[[Artist - Astor Piazzolla\|피아졸라]] / 요요 마|1974 (1997)|첼로로 듣는 누에보 탱고|
 
 ### 곡별 해설
 
@@ -165,4 +171,4 @@ Sep 27, 2026 · @Dokyu Lee
     - 원곡은 플루트+기타지만 바이올린+기타, 색소폰+피아노 등으로 자주 편곡된다.
 - **T8 Libertango — 피아졸라 / 요요 마**: 1974년 밀라노에서 녹음된 피아졸라의 대표곡. 1997년 요요 마의 _Soul of the Tango_ 음반으로 클래식 청중에게 널리 알려졌다.
 
-추천 교체안: 4부를 늘리려면 T1(알베니스)과 T7(Nightclub 1960)을 넣고, 3부의 Corcovado 발췌를 줄이면 60분에 맞는다.
+추천 교체안: 3부를 늘리려면 T1(알베니스)과 T7(Nightclub 1960)을 넣고, 다른 곡의 발췌를 그만큼 줄이면 60분에 맞는다.
